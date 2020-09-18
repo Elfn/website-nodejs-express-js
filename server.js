@@ -16,7 +16,7 @@ const app = express();
 const port = 3000;
 
 //To make express trust cookies passed to reverse proxy
-app.use('trust proxy', 1);
+app.set('trust proxy', 1);
 //Use cookie to keep session in browser
 app.use(
   cookieSession({
